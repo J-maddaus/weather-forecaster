@@ -26,7 +26,7 @@ getWeatherToday();
 // Makes buttons based on search history
 
 var contHistoryEl = $('.cityHistory');
-// ...
+
 
 function getHistory() {
     contHistoryEl.empty();
@@ -34,9 +34,9 @@ function getHistory() {
       var btnEl = $('<button>').text(`${cityHistory[i]}`);
       var rowEl = $('<row>');
   
-      rowEl.addClass('row histBtnRow'); // Fix: use addClass instead of addclass
-      btnEl.addClass('btn btn-outline-secondary histBtn'); // Fix: use addClass instead of addclass
-      btnEl.attr('type', 'button'); // Fix: use attr to set the attribute
+      rowEl.addClass('row histBtnRow'); 
+      btnEl.addClass('btn btn-outline-secondary histBtn'); 
+      btnEl.attr('type', 'button'); 
   
       contHistoryEl.prepend(rowEl);
       rowEl.append(btnEl);
@@ -56,16 +56,15 @@ function getHistory() {
   // ...
   
   function initload() {
-    var cityHistStore = JSON.parse(localStorage.getItem('city')); // Fix: use JSON.parse instead of json.parse
+    var cityHistStore = JSON.parse(localStorage.getItem('city')); 
   
     if (cityHistStore !== null) {
-      cityHistory = cityHistStore; // Fix: correct variable name
+      cityHistory = cityHistStore; 
     }
     getHistory();
     getWeatherToday();
   }
   
-  // ...
   
 
 
@@ -156,7 +155,7 @@ function getFiveDayForecast() {
         }
       });
 
-      // Inject the cards to the screen
+      
       myWeather.forEach(weather => {
         var divElCard = $('<div>');
         divElCard.attr('class', 'card text-white bg-primary mb-3 cardOne');
