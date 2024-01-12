@@ -8,13 +8,24 @@ label {
     font-size: 20px;
     font-weight: bold;
 }
+
 .card {
     margin: 15px;
 }
+
 .cardTodayDate {
     font-size: 20px;
 }
 
-.colBg {
+.colOne {
     background-color: white;
+}
+
+.colTwo {
+    background-color: black;
+}
+
+.historyBtnRow {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
